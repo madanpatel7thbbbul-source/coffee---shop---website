@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf3;
+    color: #352116;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #321c12;
+    color: white;
+}
+
+.logo {
+    color: #f5c27b;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar nav a:hover {
+    color: #f5c27b;
+}
+
+.nav-button,
+.primary-button {
+    display: inline-block;
+    background: #c58a48;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    background: #a66c30;
+}
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    color: white;
+    background:
+        linear-gradient(rgba(25,15,10,.65), rgba(25,15,10,.65)),
+        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1600")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tagline {
+    color: #c58a48;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.tagline) {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2,
+.about-content h2,
+.contact-section h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.menu-section {
+    padding: 80px 8%;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: transform .3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #75685f;
+    font-size: 14px;
+    min-height: 65px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.price-row span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #a66c30;
+}
+
+button {
+    background: #6b3d24;
+    color: white;
+    border: none;
+    padding: 10px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #a66c30;
+}
+
+.cart-box {
+    max-width: 600px;
+    margin: 55px auto 0;
+    padding: 25px;
+    background: #f2e7d8;
+    border-radius: 10px;
+}
+
+.cart-box h3 {
+    margin-bottom: 12px;
+}
+
+#cart-items {
+    padding-left: 20px;
+}
+
+#cart-total {
+    margin-top: 15px;
+}
+
+.clear-button {
+    margin-top: 15px;
+    background: #9a3d2b;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 10%;
+    background: #f1e6d8;
+}
+
+.about-image,
+.about-content {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-content p {
+    margin-bottom: 18px;
+}
+
+.contact-section {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.contact-section p {
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 22px;
+    background: #321c12;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .section-title h2,
+    .about-content h2,
+    .contact-section h2 {
+        font-size: 29px;
+    }
+}
